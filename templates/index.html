@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Interview Flask App Prediction</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    </head>
+
+    <body>
+        <h1 class="text-center">Bulldozer Salesprice Prediction</h1>
+
+        <form class="p-3 text-center" action="/", method="post" enctype="multipart/form-data">
+            <h2></h2>
+            <p> Select index from Bulldozer dataset: (Up to index: 12456)</p>
+            <p><input type="text" name="idx" value="0" /></p>
+            <p><input type="submit" value="Predict Price" /></p>
+            
+        </form>
+
+        {% if prediction %}
+            <p class="text-center"> {{prediction}} USD</p>
+            <p class="text-center"> {{salesID}}</p>
+        {% endif %}
+    </body>
+
+
+</html>
